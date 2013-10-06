@@ -12,6 +12,7 @@ Redis Session Manager for Yii Framework
 
 Copy RedisSessionManager.php to application/components/ and set in config:
 
+```php
 'import' => array(
     'application.components.*',
 ),
@@ -27,6 +28,7 @@ Copy RedisSessionManager.php to application/components/ and set in config:
         'timeout' => 28800, //8h
     ),
 ),
+```
 
 
 
