@@ -45,6 +45,8 @@ class RedisSessionManager extends CHttpSession
 	/**
 	 * Session open handler.
 	 * Alias for open method
+	 * @param string $savePath session save path
+	 * @param string $sessionName session name
 	 * @return boolean whether session is opened successfully
 	 */
 	public function openSession($savePath, $sessionName)
@@ -69,6 +71,7 @@ class RedisSessionManager extends CHttpSession
 
 	/**
 	 * Session read handler.
+	 * @param string $id session ID
 	 * @return array the session data
 	 */
 	public function readSession($id)
@@ -79,6 +82,8 @@ class RedisSessionManager extends CHttpSession
 	/**
 	 * Session write handler.
 	 * @param array $data
+	 * @param string $id session ID
+	 * @param string $data session data
 	 * @return boolean whether session write is successful
 	 */
 	public function writeSession($id, $data)
@@ -97,6 +102,7 @@ class RedisSessionManager extends CHttpSession
 	/**
 	 * Session destroy handler.
 	 * Alias for destroy method
+	 * @param string $id session ID
 	 * @return boolean whether session is destroyed successfully
 	 */
 	public function destroySession($id)
